@@ -22,3 +22,19 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+y = int(input("Input the year : "))
+m = int(input("Input the month : "))
+
+def check_calendar(month , year):
+    try:
+      if x== '' and y== '':
+        print('current calendar: ')
+        return calendar.month(datetime.now().year, datetime.now().month)
+    except:
+      print('invalid inputs')    
+    # print(calendar.month(year, month))
+
+
+check_calendar(m,y)
