@@ -22,3 +22,23 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+y = input("Input the year: ")
+m = input("Input the month: ")
+
+def check_calendar(year, month):
+    try:
+      if year== '' and month=="":
+        print(f'current calendar: {calendar.month(datetime.now().year, datetime.now().month)}')
+      elif len(month) == 1 and year == '':
+        # print(month)
+        print(f"{calendar.month(datetime.now().year, int(month))}")
+      elif year and month:
+        print(f'the month and year you selected: {calendar.month(int(year), int(month))}')
+    except :
+      print('expected year format to look like 1990 and month format to look like 1')    
+    # print(calendar.month(year, month))
+
+
+check_calendar(y,m)
